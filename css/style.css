@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  -webkit-font-smoothing: antialiased;
+}
+
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+input,
+button,
+textarea {
+  background-color: #fff;
+  border: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #90d3a6;
+}
+
+.tree {
+  position: relative;
+  width: 20rem;
+  height: 22rem;
+}
+.tree__trunk {
+  width: 20rem;
+  height: 2rem;
+  background-color: #024817;
+  position: absolute;
+  bottom: 0;
+  border-radius: 1rem;
+}
+.tree__branch {
+  background-color: #024817;
+  position: absolute;
+  border-radius: 1rem;
+}
+.tree__branch-1 {
+  height: 22rem;
+  width: 2rem;
+  background-color: #024817;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+}
+.tree__branch-2 {
+  height: 2rem;
+  width: 10rem;
+  top: 30%;
+  left: 5%;
+  transform: rotate(30deg);
+}
+.tree__branch-3 {
+  height: 2rem;
+  width: 10rem;
+  top: 60%;
+  left: 5%;
+  transform: rotate(30deg);
+}
+.tree__branch-4 {
+  height: 2rem;
+  width: 10rem;
+  top: 30%;
+  right: 5%;
+  transform: rotate(-30deg);
+}
+.tree__branch-5 {
+  height: 2rem;
+  width: 10rem;
+  top: 60%;
+  right: 5%;
+  transform: rotate(-30deg);
+}

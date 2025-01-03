@@ -1,0 +1,72 @@
+@import "./reset";
+
+body {
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #90d3a6;
+}
+
+.tree {
+	position: relative;
+	width: 20rem;
+	height: 22rem;
+
+	&__trunk {
+		width: 20rem;
+		height: 2rem;
+		background-color: #024817;
+
+		position: absolute;
+		bottom: 0;
+		border-radius: 1rem;
+	}
+
+	&__branch {
+		background-color: #024817;
+		position: absolute;
+		border-radius: 1rem;
+	}
+
+	&__branch-1 {
+		height: 22rem;
+		width: 2rem;
+		background-color: #024817;
+		left: 50%;
+		top: 0;
+		transform: translateX(-50%);
+	}
+
+	&__branch-2 {
+		height: 2rem;
+		width: 10rem;
+		top: 30%;
+		left: 5%;
+		transform: rotate(30deg);
+	}
+
+	&__branch-3 {
+		height: 2rem;
+		width: 10rem;
+		top: 60%;
+		left: 5%;
+		transform: rotate(30deg);
+	}
+
+	&__branch-4 {
+		height: 2rem;
+		width: 10rem;
+		top: 30%;
+		right: 5%;
+		transform: rotate(-30deg);
+	}
+
+	&__branch-5 {
+		height: 2rem;
+		width: 10rem;
+		top: 60%;
+		right: 5%;
+		transform: rotate(-30deg);
+	}
+}
