@@ -76,11 +76,23 @@ a {
 }
 
 body {
-  height: 100vh;
+  height: 100dvh;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #90d3a6;
+}
+
+.heading__primary {
+  color: transparent;
+  -webkit-text-stroke: 0.2rem #024817;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: clamp(3.25rem, 5vw, 7rem);
+  font-weight: bold;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 
 .tree {
@@ -95,6 +107,9 @@ body {
   position: absolute;
   bottom: 0;
   border-radius: 1rem;
+  transform-origin: left;
+  transform: scaleX(0);
+  animation: scale-x 0.75s 0.5s ease-out forwards;
 }
 .tree__branch {
   background-color: #024817;
@@ -107,33 +122,60 @@ body {
   background-color: #024817;
   left: 50%;
   top: 0;
-  transform: translateX(-50%);
+  transform: translateX(-50%) scaleY(0);
+  transform-origin: bottom;
+  animation: scale-y 0.75s 1s ease-out forwards;
 }
 .tree__branch-2 {
   height: 2rem;
   width: 10rem;
   top: 30%;
   left: 5%;
-  transform: rotate(30deg);
+  transform: rotate(30deg) scaleX(0);
+  animation: scale-x-branch-1-2 0.5s 1.5s ease-out forwards;
 }
 .tree__branch-3 {
   height: 2rem;
   width: 10rem;
   top: 60%;
   left: 5%;
-  transform: rotate(30deg);
+  transform: rotate(30deg) scaleX(0);
+  animation: scale-x-branch-1-2 0.5s 2.5s ease-out forwards;
 }
 .tree__branch-4 {
   height: 2rem;
   width: 10rem;
   top: 30%;
   right: 5%;
-  transform: rotate(-30deg);
+  transform: rotate(-30deg) scaleX(0);
+  animation: scale-x-branch-3-4 0.5s 2s ease-out forwards;
 }
 .tree__branch-5 {
   height: 2rem;
   width: 10rem;
   top: 60%;
   right: 5%;
-  transform: rotate(-30deg);
+  transform: rotate(-30deg) scaleX(0);
+  animation: scale-x-branch-3-4 0.5s 3s ease-out forwards;
+}
+
+@keyframes scale-x {
+  to {
+    transform: scaleX(1);
+  }
+}
+@keyframes scale-x-branch-1-2 {
+  to {
+    transform: rotate(30deg) scaleX(1);
+  }
+}
+@keyframes scale-x-branch-3-4 {
+  to {
+    transform: rotate(-30deg) scaleX(1);
+  }
+}
+@keyframes scale-y {
+  to {
+    transform: translateX(-50%) scaleY(1);
+  }
 }
